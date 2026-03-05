@@ -12,6 +12,9 @@ class Account{
       _balance -= amount;
       _transactions.add(Transaction(_transactions.length+1, -amount));
     }
+    else{
+      print("Enter a valid amount");
+    }
   }
   double get balance => _balance;
   List<Transaction> get transactions => _transactions;
@@ -31,6 +34,9 @@ class CurrentAccount extends Account{
     if (amount <= _balance + overdraftLimit){
       _balance -= amount;
       _transactions.add(Transaction(_transactions.length+1, -amount));
+    }
+    else{
+      print("Enter a valid amount");
     }
   }
 }
