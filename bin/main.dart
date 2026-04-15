@@ -5,7 +5,7 @@ void main(){
   SavingsAccount acc1 = SavingsAccount(1, 10000, 0.1);
   customer1.addAccount(acc1);
   print("Account Balance: ${acc1.balance}");
-  acc1.deposit(10000);
+  acc1.deposit(10000); // this can be an abstraction as the complex details are hidden
   print("deposited");
   acc1.addInterest();
   print("Account Balance: ${acc1.balance}");

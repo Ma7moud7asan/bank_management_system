@@ -28,7 +28,7 @@ class Account with Validation, LimitChecker implements AccountOperations{
   List<Transaction> get transactions => _transactions; // using Getter to access transactions
 }
 
-// Savings Account has interest rate
+// Savings Account has interest rate and inherit from Account
 class SavingsAccount extends Account{
   double interestRate;
   SavingsAccount(super.accNum, super.balance, this.interestRate); //constructor
@@ -38,7 +38,7 @@ class SavingsAccount extends Account{
   }
 }
 
-// Current Account has overdraft limit
+// Current Account has overdraft limit and inherit from Account
 class CurrentAccount extends Account{
   double overdraftLimit;
   CurrentAccount(super.accNum, super.balance, this.overdraftLimit); //constructor
